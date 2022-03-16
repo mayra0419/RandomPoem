@@ -51,7 +51,7 @@ class RandomPoemControllerTest {
             .andReturn();
 
         Assertions.assertNotNull(mvcResult.getResponse(), "response is null");
-        Assertions.assertEquals("application/json",
+        Assertions.assertEquals("text/plain;charset=UTF-8",
             mvcResult.getResponse().getContentType(), "wrong content type");
         var randomPoem = mvcResult.getResponse().getContentAsString();
         Assertions.assertEquals(5, randomPoem.split(System.lineSeparator()).length,

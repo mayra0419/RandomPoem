@@ -27,7 +27,7 @@ public class RandomPoemController {
         return ResponseEntity.ok(rules);
     }
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping
     public ResponseEntity<String> getRandomPoem() {
         var randomPoem = buildRandomPoemService.execute();
         return ResponseEntity.ok(randomPoem);
